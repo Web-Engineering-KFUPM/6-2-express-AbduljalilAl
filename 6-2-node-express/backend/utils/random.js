@@ -1,3 +1,6 @@
 export function getRandomInt(max) {
-  return {/*write code to here*/}
+  if (typeof max !== "number" || max <= 0) {
+    throw new Error("max must be a positive number");
+  }
+  return Math.floor(Math.random() * max);
 }
